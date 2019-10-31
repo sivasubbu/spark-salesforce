@@ -50,7 +50,7 @@ case class BulkRelation(
   }
 
   lazy val records: DataFrame = {
-    val inputJobInfo = new JobInfo("CSV", sfObject, "query")
+    val inputJobInfo = new JobInfo("CSV", sfObject, "queryAll")
     val jobInfo = bulkAPI.createJob(inputJobInfo, customHeaders.asJava)
     val jobId = jobInfo.getId
 
